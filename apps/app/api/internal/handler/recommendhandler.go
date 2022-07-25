@@ -10,16 +10,16 @@ import (
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func ApiHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func RecommendHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.Request
+		var req types.RecommendRequest
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.Error(w, err)
 			return
 		}
 
-		l := logic.NewApiLogic(r.Context(), svcCtx)
-		resp, err := l.Api(&req)
+		l := logic.NewRecommendLogic(r.Context(), svcCtx)
+		resp, err := l.Recommend(&req)
 		if err != nil {
 			httpx.Error(w, err)
 		} else {

@@ -5,21 +5,13 @@ import (
 
 	"github.com/Galen-Chen177/lebron/apps/app/api/internal/logic"
 	"github.com/Galen-Chen177/lebron/apps/app/api/internal/svc"
-	"github.com/Galen-Chen177/lebron/apps/app/api/internal/types"
-
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func ApiHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func FlashSaleHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.Request
-		if err := httpx.Parse(r, &req); err != nil {
-			httpx.Error(w, err)
-			return
-		}
-
-		l := logic.NewApiLogic(r.Context(), svcCtx)
-		resp, err := l.Api(&req)
+		l := logic.NewFlashSaleLogic(r.Context(), svcCtx)
+		resp, err := l.FlashSale()
 		if err != nil {
 			httpx.Error(w, err)
 		} else {

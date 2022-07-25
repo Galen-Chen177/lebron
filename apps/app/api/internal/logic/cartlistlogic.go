@@ -9,21 +9,21 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-type ApiLogic struct {
+type CartListLogic struct {
 	logx.Logger
 	ctx    context.Context
 	svcCtx *svc.ServiceContext
 }
 
-func NewApiLogic(ctx context.Context, svcCtx *svc.ServiceContext) *ApiLogic {
-	return &ApiLogic{
+func NewCartListLogic(ctx context.Context, svcCtx *svc.ServiceContext) *CartListLogic {
+	return &CartListLogic{
 		Logger: logx.WithContext(ctx),
 		ctx:    ctx,
 		svcCtx: svcCtx,
 	}
 }
 
-func (l *ApiLogic) Api(req *types.Request) (resp *types.Response, err error) {
+func (l *CartListLogic) CartList(req *types.CartListRequest) (resp *types.CartListResponse, err error) {
 	// todo: add your logic here and delete this line
 
 	return
