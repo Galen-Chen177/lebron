@@ -3,14 +3,14 @@ package handler
 import (
 	"net/http"
 
-	"admin/internal/logic"
-	"admin/internal/svc"
-	"admin/internal/types"
+	"lebron/apps/app/api/internal/logic"
+	"lebron/apps/app/api/internal/svc"
+	"lebron/apps/app/api/internal/types"
 
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 
-func AdminHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func ApiHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var req types.Request
 		if err := httpx.Parse(r, &req); err != nil {
@@ -18,8 +18,8 @@ func AdminHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 			return
 		}
 
-		l := logic.NewAdminLogic(r.Context(), svcCtx)
-		resp, err := l.Admin(&req)
+		l := logic.NewApiLogic(r.Context(), svcCtx)
+		resp, err := l.Api(&req)
 		if err != nil {
 			httpx.Error(w, err)
 		} else {

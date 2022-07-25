@@ -3,9 +3,9 @@ package handler
 import (
 	"net/http"
 
-	"admin/internal/logic"
-	"admin/internal/svc"
-	"admin/internal/types"
+	"lebron/apps/product/admin/internal/logic"
+	"lebron/apps/product/admin/internal/svc"
+	"lebron/apps/product/admin/internal/types"
 
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
