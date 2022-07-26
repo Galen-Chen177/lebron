@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"rpc/internal/config"
-	"rpc/internal/server"
-	"rpc/internal/svc"
-	"rpc/rpc"
+	"github.com/Galen-Chen177/lebron/apps/order/rpc/internal/config"
+	"github.com/Galen-Chen177/lebron/apps/order/rpc/internal/server"
+	"github.com/Galen-Chen177/lebron/apps/order/rpc/internal/svc"
+	"github.com/Galen-Chen177/lebron/apps/order/rpc/rpc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
