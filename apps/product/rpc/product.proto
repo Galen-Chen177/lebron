@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package rpc;
-option go_package="./rpc";
+package product;
+option go_package="./product";
 
 message Request {
   string ping = 1;
