@@ -9,8 +9,10 @@ goctl rpc new rpc
 # goctl 生成 http 代码
 goctl api new admin
 
-# goctl 生成修改过的代码
+# goctl 生成修改过的代码-api
 goctl api go -api api.api -dir .
+# goctl 生成修改过的代码-rpc
+goctl rpc protoc order.proto --go_out=. --go-grpc_out=. --zrpc_out=.
 ```
 
 ### 本项目包含很多小项目。apps文件夹中，每个文件夹都是一个小项目
