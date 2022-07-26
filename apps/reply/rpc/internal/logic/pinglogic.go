@@ -3,8 +3,8 @@ package logic
 import (
 	"context"
 
-	"lebron/apps/reply/rpc/internal/svc"
-	"lebron/apps/reply/rpc/rpc"
+	"github.com/Galen-Chen177/lebron/apps/reply/rpc/internal/svc"
+	"github.com/Galen-Chen177/lebron/apps/reply/rpc/rpc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

@@ -6,9 +6,9 @@ package server
 import (
 	"context"
 
-	"lebron/apps/cart/rpc/internal/logic"
-	"lebron/apps/cart/rpc/internal/svc"
-	"lebron/apps/cart/rpc/rpc"
+	"github.com/Galen-Chen177/lebron/apps/cart/rpc/internal/logic"
+	"github.com/Galen-Chen177/lebron/apps/cart/rpc/internal/svc"
+	"github.com/Galen-Chen177/lebron/apps/cart/rpc/rpc"
 )
 
 type RpcServer struct {
